@@ -54,7 +54,7 @@ const App = () => {
       </div>
       <div className="row">
         <TextInput
-          label="Height"
+          label="Height:"
           placeholder="Enter height in cm"
           handleChange={handleHeightChange}
           value={height}
@@ -62,7 +62,7 @@ const App = () => {
       </div>
       <div className="row">
         <TextInput
-          label="Weight"
+          label="Weight:"
           placeholder="Enter weight in kg"
           handleChange={handleWeightChange}
           value={weight}
