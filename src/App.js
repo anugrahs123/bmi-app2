@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import TextInput from "./Component/Textinput";
 import Button from "./Component/Button";
 import './Styles/Styles.css'
+import img from './signupq.jfif'
 
 const App = () => {
   const [weight, setWeight] = useState();
@@ -40,6 +41,7 @@ const App = () => {
 
   return (
     <div className="App">
+      {/* <img src={img}></img> */}
     <div className="container">
       <div
         style={{
@@ -50,7 +52,7 @@ const App = () => {
           boxSizing: "border-box",
         }}
       >
-        <h2>Welcome to our BMI Calculator!</h2>
+        <h2> BMI Calculator!</h2>
       </div>
       <div className="row">
         <TextInput
@@ -80,7 +82,7 @@ const App = () => {
         
       </div>
       <div className="row">
-        <h3>{bmiClass}</h3>
+        <h3>You are {bmiClass}</h3>
       </div>
     </div>
     </div>
