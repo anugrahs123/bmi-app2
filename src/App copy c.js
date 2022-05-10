@@ -14,11 +14,9 @@ const App = () => {
 
   const handleHeightChange = (e) => {
     setHeight(e.target.value);
-    setShow(false)
   }
   const handleWeightChange = (e) =>{
      setWeight(e.target.value);
-     setShow(false)
   }
 
   const computeBmi = () => {
@@ -33,6 +31,8 @@ const App = () => {
 
   const getBmi = (bmi) => {
 
+    console.log("skdjfhb")
+    
     if (bmi < 18.5) {
       return "Underweight";
     }
@@ -48,27 +48,38 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="App">
+    <div className="container">
+      <div className="form">
         <h2> BMI Calculator!</h2>
+      </div>
+      <div className="row">
         <TextInput
           label="Height:"
           placeholder="Enter height in cm"
           handleChange={handleHeightChange}
           value={height}
         />
+      </div>
+      <div className="row">
         <TextInput
           label="Weight:"
           placeholder="Enter weight in kg"
           handleChange={handleWeightChange}
           value={weight}
         />
+        
+      </div>
+      <div className="row">
         <Button label="CALCULATE" onClick={computeBmi} />
-      <div >
+      </div>
+      <div className="row">
        {show &&  <h3>Your BMI = {bmi}</h3> }
       </div>
-      <div >
+      <div className="row">
         {show &&  <h3>You are {bmiClass}</h3>}
       </div>
+    </div>
     </div>
   );
 };
